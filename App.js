@@ -1,17 +1,11 @@
-import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import TabNavigator from './src/navigation/TabNavigator';
-import TransactionsProvider from './src/context/TransactionsContext';
+import AppNavigator from './src/navigation/AppNavigator';
 
-const App = () => {
+export default function App() {
   return (
-    <TransactionsProvider>
-      <NavigationContainer>
-        <TabNavigator />
-      </NavigationContainer>
-    </TransactionsProvider>
+    <NavigationContainer>
+      <AppNavigator />
+    </NavigationContainer>
   );
-};
-
-export default App;
+}
